@@ -1,4 +1,4 @@
-class BrowserHistoryNode {
+public class BrowserHistoryNode {
     String Page_Name;
     String Page_Id;
     String Date;
