@@ -23,12 +23,11 @@ To run this application, you'll need:
 3. Compile the `BrowserHistory.java` file using the Java compiler:
 4. Run the compiled class:
 
-
 ## Usage
 
 To use the application, instantiate a `BrowserHistory` object in your Java program. Here's an example on how to interact with it:
 
-java
+```java
 public class Main {
  public static void main(String[] args) {
      BrowserHistory history = new BrowserHistory();
