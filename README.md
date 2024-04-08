@@ -28,18 +28,28 @@ To run this application, you'll need:
 To use the application, instantiate a `BrowserHistory` object in your Java program. Here's an example on how to interact with it:
 
 ```java
-public class Main {
- public static void main(String[] args) {
-     BrowserHistory history = new BrowserHistory();
+public class BrowserHistoryTest {
+    public static void main(String[] args) {
 
-     // Inserting history entries
-     history.insertHistory("Google", "001", "2024-04-07", "https://www.google.com", false);
-     history.insertHistory("GitHub", "002", "2024-04-08", "https://www.github.com", true);
+        BrowserHistory browserHistory = new BrowserHistory();
 
-     // Display the history in reverse
-     history.displayHistoryReverse();
+        // Inserting browser history
+        browserHistory.insertBrowserHistory("YouTube", "001A", "10.08.2023", "https://www.youtube.com/", false);
+        browserHistory.insertBrowserHistory("GeeksforGeeks", "011B", "09.08.2023", "https://www.geeksforgeeks.org/", true);
+        browserHistory.insertBrowserHistory("Tutorialspoint", "012C", "06.08.2023", "https://www.tutorialspoint.com/index.htm", true);
+        browserHistory.insertBrowserHistory("Stackoverflow", "003D", "05.08.2023", "https://stackoverflow.com/", false);
 
-     // Display only bookmarked sites
-     history.displayBookmarkedSites();
- }
+        // Displaying browser history in normal order
+        System.out.println("Browser History in Normal Order:");
+        browserHistory.displayBrowserHistory();
+
+        // Displaying browser history in reverse order
+        System.out.println("\nBrowser History in Reverse Order:");
+        browserHistory.displayBrowserHistoryReverse();
+
+        // Displaying only the bookmarked pages
+        System.out.println("\nBookmarked Pages:");
+        browserHistory.displayBookmarkedPages();
+    }
 }
+
