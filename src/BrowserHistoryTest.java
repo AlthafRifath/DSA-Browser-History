@@ -10,7 +10,7 @@ public class BrowserHistoryTest {
         browserHistory.insertBrowserHistory("Stackoverflow", "003D", "05.08.2023", "https://stackoverflow.com/", false);
 
         // Displaying browser history in normal order
-        System.out.println("Browser History in Normal Order:");
+        System.out.println("\nBrowser History in Normal Order:");
         browserHistory.displayBrowserHistory();
 
         // Displaying browser history in reverse order
@@ -20,5 +20,8 @@ public class BrowserHistoryTest {
         // Displaying only the bookmarked pages
         System.out.println("\nBookmarked Pages:");
         browserHistory.displayBookmarkedPages();
+
+        // Removing the last node from the browser history
+        browserHistory.popBrowserHistory();
     }
 }

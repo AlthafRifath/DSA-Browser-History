@@ -21,6 +21,21 @@ public class BrowserHistory {
 
     }
 
+    // popBrowserHistory() method to remove the last node from the browser history
+    public void popBrowserHistory() {
+        if (this.tail != null) {
+            if (this.tail.previous != null) {
+                this.tail = this.tail.previous;
+                this.tail.next = null;
+            } else {
+                this.head = null;
+                this.tail = null;
+            }
+        }else {
+            System.out.println("\nBrowser History is empty");
+        }
+    }
+
     // Display the browser history in normal order
     public void displayBrowserHistory() {
         BrowserHistoryNode current = this.head;
