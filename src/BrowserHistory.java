@@ -21,6 +21,27 @@ public class BrowserHistory {
 
     }
 
+    // Delete a history node from the browser history
+    public void deleteBrowserHistory(String Page_Id) {
+        BrowserHistoryNode current = this.head;
+        while (current != null) {
+            if (current.Page_Id.equals(Page_Id)) {
+                if (current == this.head) {
+                    this.head = current.next;
+                    this.head.previous = null;
+                } else if (current == this.tail) {
+                    this.tail = current.previous;
+                    this.tail.next = null;
+                } else {
+                    current.previous.next = current.next;
+                    current.next.previous = current.previous;
+                }
+                break;
+            }
+            current = current.next;
+        }
+    }
+
     // popBrowserHistory() method to remove the last node from the browser history
     public void popBrowserHistory() {
         if (this.tail != null) {
